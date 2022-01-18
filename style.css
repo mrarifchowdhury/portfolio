@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+body,
+.about-card,
+.firstinfo,
+.project-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Original Surfer', cursive !important;
+    width: 100%;
+    min-height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.about-me {
+    position: relative;
+    animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+    padding-top: 50px;
+}
+
+.about-card {
+    width: 100%;
+    border: none !important;
+    padding: 20px;
+    border-radius: 10px !important;
+    background-image: linear-gradient(60deg , #F8FFFC , #F8FFAE);
+    box-shadow: 0 7px 30px 5px rgba(150, 170, 180, 0.4) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card:hover {
+    box-shadow: 0 7px 30px 5px rgba(150, 170, 180, 0.7) !important;
+}
+
+.about-card:before {
+    content: '';
+    display: block;
+    width: 190px;
+    height: 110%;
+    /* background-color: #ecf8ea;*/
+    background-color: #F8FFAE;
+    position: absolute;
+    animation: rotatemagic 1s cubic-bezier(.44, .45, .44, .45) 1s both;
+}
+
+.about-card:after {
+    content: '';
+    display: block;
+    left: 112px;
+    width: 45px;
+    height: 107.5%;
+    background-color: #F8FFAE;
+    /*   border-bottom-right-radius: 10px;
+    border-top-right-radius: 40px;*/
+    position: absolute;
+    animation: sliderloopmagic 4s cubic-bezier(.44, .45, .44, .45) 1s both;
+}
+
+
+.firstinfo {
+    flex-direction: row;
+    z-index: 2;
+    position: relative;
+}
+
+.firstinfo img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+.firstinfo .profileinfo {
+    padding: 0px 10px 0 35px;
+}
+
+.firstinfo .profileinfo h1 {
+    font-size: 1.8em;
+}
+
+.firstinfo .profileinfo h3 {
+    font-size: 1.1em;
+    color: grey;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.firstinfo .profileinfo p.bio {
+    padding: 10px 0px;
+    color: purple !important;
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.firstinfo .profileinfo p.contact {
+    color: brown !important;
+    font-size: 17px;
+    font-family: monospace;
+
+}
+
+@keyframes animatop {
+    0% {
+        opacity: 0;
+        bottom: -500px;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+@keyframes animainfos {
+    0% {
+        bottom: 10px;
+    }
+
+    100% {
+        bottom: -42px;
+    }
+}
+
+@keyframes rotatemagic {
+    0% {
+        transform: rotate(0deg);
+        top: -24px;
+        left: -253px;
+    }
+
+    100% {
+        transform: rotate(-180deg);
+        top: -24px;
+        left: -78px;
+    }
+}
+
+@keyframes sliderloopmagic {
+    0% {
+        top: -24px;
+        left: 95.5%;
+    }
+
+    30% {
+        top: -24px;
+        left: 100%;
+    }
+
+    50%,
+    60%,
+    70%,
+    80% {
+        top: -24px;
+        left: 112px;
+    }
+
+    100% {
+
+        top: -24px;
+        left: 100%;
+    }
+}
+
+
+.project-tab a {
+    text-decoration: none !important;
+}
+
+.cat1 {
+
+    background: linear-gradient(to left, #999966 0%, #996600 57%);
+    border-radius: 10px !important;
+    color: white !important;
+}
+
+.cat2 {
+    background: linear-gradient(to left, #0000cc 0%, #0066ff 60%);
+    border-radius: 10px !important;
+    color: white !important;
+}
+
+.cat3 {
+    background-image: linear-gradient(60deg, lightsalmon, orange);
+    border-radius: 10px !important;
+    color: white !important;
+}
+
+.cat4 {
+    background: linear-gradient(to left, #006600 0%, #669900 50%);
+    border-radius: 10px !important;
+    color: white !important;
+}
+
+.cat1,
+.cat2,
+.cat3,
+.cat4 {
+    cursor: pointer;
+}
+
+
+.cat1 i,
+.cat2 i,
+.cat3 i,
+.cat4 i {
+    color: white !important;
+}
+
+.cat1 span,
+.cat2 span,
+.cat3 span,
+.cat4 span {
+    font-family: cursive;
+    font-size: 14px;
+}
+
+
+.cat1:Hover,
+.cat2:Hover,
+.cat3:Hover,
+.cat4:Hover {
+    box-shadow: 5px 5px 8px #888888;
+}
+
+
+.project-card {
+    border: none !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.project-card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover>.card-body {
+    opacity: 0.3;
+
+}
+
+.project-card:hover>.card-button {
+    display: block;
+}
+
+
+.project-details .project-card .card-footer h5 {
+    /*font-weight: bold;*/
+    font-family: 'Original Surfer', cursive;
+    font-size: 18px;
+}
+
+.project-details .project-card .card-footer span {
+    font-family: cursive;
+    color: #888888;
+    font-size: 13px;
+}
+
+.card-button {
+    position: absolute;
+    display: none;
+    top: 35%;
+    -ms-flex-item-align: center !important;
+    align-self: center !important;
+    font-family: cursive;
+}
+
+.img-resized{
+    width: 100%;
+    height: 275px !important;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .about-me {
+    padding-top: 5px;
+}
+    .about-card {
+    border: 1px solid red !important;
+    padding: 20px 20px 50px 0px;
+    }
+
+    .firstinfo {
+    flex-direction: column;
+    }
+
+    .firstinfo img{
+    margin: 50px;
+    }
+
+    .firstinfo .profileinfo p.bio {
+    text-align: justify;
+    }
+
+}
