@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
 
-body,
+body, 
 .about-card,
-.firstinfo,
+.myProfile,
 .project-tab {
     display: flex;
     justify-content: center;
@@ -71,27 +71,27 @@ body {
 }
 
 
-.firstinfo {
+.myProfile {
     flex-direction: row;
     z-index: 2;
     position: relative;
 }
 
-.firstinfo img {
+.myProfile img {
     border-radius: 50%;
     width: 120px;
     height: 120px;
 }
 
-.firstinfo .profileinfo {
+.myProfile .profileinfo {
     padding: 0px 10px 0 35px;
 }
 
-.firstinfo .profileinfo h1 {
+.myProfile .profileinfo h1 {
     font-size: 1.8em;
 }
 
-.firstinfo .profileinfo h3 {
+.myProfile .profileinfo h3 {
     font-size: 1.1em;
     color: grey;
     font-style: italic;
@@ -99,18 +99,16 @@ body {
     font-weight: bold;
 }
 
-.firstinfo .profileinfo p.bio {
+.myProfile .profileinfo p.bio {
     padding: 10px 0px;
     color: purple !important;
     font-size: 19px;
     line-height: 1.2;
 }
 
-.firstinfo .profileinfo p.contact {
+.myProfile .profileinfo p.contact {
     color: brown !important;
     font-size: 17px;
-    font-family: monospace;
-
 }
 
 @keyframes animatop {
@@ -289,22 +287,24 @@ body {
 
 @media only screen and (max-width: 600px) {
     .about-me {
-    padding-top: 5px;
-}
+    padding-top: 15px;
+    }
+    .myProfile .profileinfo {
+    padding: 0px 10px 0 29px;
+    }
     .about-card {
-    border: 1px solid red !important;
     padding: 20px 20px 50px 0px;
     }
 
-    .firstinfo {
+    .myProfile {
     flex-direction: column;
     }
 
-    .firstinfo img{
+    .myProfile img{
     margin: 50px;
     }
 
-    .firstinfo .profileinfo p.bio {
+    .myProfile .profileinfo p.bio {
     text-align: justify;
     }
 
