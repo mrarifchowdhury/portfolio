@@ -317,6 +317,14 @@ body {
     text-align: right;
 }
 
+
+#frontend .tab-image img,
+#php_projects .tab-image img,
+#wordpress_elementor .tab-image img,
+#react .tab-image img{
+    height: 70px ;
+}  
+
 .tab1{
     background: linear-gradient(to left, #999966 0%, #996600 57%);
 }
